@@ -667,6 +667,7 @@ def blog_preview(pub = "local"):
             sys.stdout.write("\nYou have to login in the browser to preview the post when save as draft.")
     else:
         raise VimPressException("Invalid option: %s " % pub)
+    vim.command('redraw!')
 
 
 @__exception_check
