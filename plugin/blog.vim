@@ -131,7 +131,7 @@ class VimPressFailedGetMkd(VimPressException):
 
 def markdown2html(rawtext):
     # see http://www.freewisdom.org/projects/python-markdown/Available_Extensions
-    exts = ['meta', 'toc', 'def_list', 'abbr', 'footnotes', 'tables', 'codehilite', 'fenced_code']
+    exts = ['meta', 'toc(marker=$TOC$)', 'def_list', 'abbr', 'footnotes', 'tables', 'codehilite', 'fenced_code']
     html = markdown.markdown(rawtext.decode('utf-8'), exts).encode('utf-8')
     return html
 
